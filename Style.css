@@ -1,0 +1,12 @@
+body {
+    background-image: linear-gradient(
+        180deg,
+        #87CEFA 5%,
+        #778899 20%,
+        #778899 60%,
+        #B0C4DE 95%
+        );
+        margin: 0;
+        min-height: 100vh;
+        width: 100%;
+}
