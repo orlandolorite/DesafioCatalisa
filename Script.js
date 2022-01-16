@@ -5,7 +5,7 @@ const especie = document.querySelector('#especie');
 const condicao = document.querySelector('#status');
 
 gerarValorAletorio = () => {
-    return Math.floor(Math.random() * 671);
+    return Math.floor(Math.random() * 4);
 }
 
 pegarPersonagem = () => {
@@ -16,15 +16,16 @@ pegarPersonagem = () => {
             Accept: 'application/json', 
             "Content-type": 'application/json'
         }
-    }).then((response) => response.json()).then((data) => {
+    })
+    .then((response) => response.json())
+    .then((data) => {
         imagem.src  = data.image;
         imagem.alt = data.name;
         nomeDoPersonagem.innerHTML = data.name;
         especie.innerHTML = data.species;
-        condicao.innerHTML = data.status;
-
+        condicao.innerHTML = data.status
     });
 
 }
 
-botao.onclick = pegarPersonagem; 
+botao.onclick = pegarPersonagem;
